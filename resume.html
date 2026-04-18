@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shahryar Sultan - CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a2744;
+      --gold: #c9a84c;
+      --text: #2d2d2d;
+      --muted: #555;
+      --light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #e5e7eb;
+      color: var(--text);
+      font-size: 10pt;
+      line-height: 1.5;
+    }
+
+    /* --- Print button bar --- */
+    .print-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .print-bar p {
+      color: #94a3b8;
+      font-size: 0.78rem;
+    }
+    .print-bar button {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+    }
+    .print-bar button:hover { background: #d4b05a; }
+
+    /* --- Document wrapper --- */
+    .page-wrap {
+      padding: 52px 24px 40px;
+    }
+    .resume {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+    }
+
+    /* --- Header --- */
+    .resume-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 36px 48px 32px;
+      text-align: center;
+    }
+    .resume-header h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .resume-header .title {
+      color: var(--gold);
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .resume-header .contacts {
+      font-size: 8.5pt;
+      color: #94a3b8;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 14px;
+    }
+    .resume-header .contacts a { color: #94a3b8; text-decoration: none; }
+    .resume-header .contacts a:hover { color: var(--gold); }
+    .gold-bar {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 18px auto 0;
+    }
+
+    /* --- Sections --- */
+    .section {
+      padding: 20px 48px 18px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .section:last-child { border-bottom: none; }
+
+    .section-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      margin-bottom: 5px;
+    }
+    .gold-rule {
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    /* --- Summary --- */
+    .summary p {
+      font-size: 9.5pt;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .summary p:last-child { margin-bottom: 0; }
+    .summary p.bold { font-weight: 600; color: var(--text); }
+
+    /* --- Competencies / Capabilities --- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 9pt;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .bullet-item .diamond {
+      color: var(--gold);
+      font-size: 10pt;
+      flex-shrink: 0;
+      margin-top: 1px;
+      line-height: 1;
+    }
+    .bullet-item strong {
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* --- Experience --- */
+    .exp-entry {
+      margin-bottom: 18px;
+      padding-left: 12px;
+      border-left: 2px solid rgba(201,168,76,0.35);
+      page-break-inside: avoid;
+    }
+    .exp-entry:last-child { margin-bottom: 0; }
+
+    .exp-company {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .exp-meta {
+      font-size: 8pt;
+      color: #888;
+      margin-top: 1px;
+      margin-bottom: 4px;
+    }
+    .exp-type {
+      font-size: 7pt;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-left: 4px;
+    }
+    .exp-role {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+    .exp-role-period {
+      font-size: 8pt;
+      color: #999;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+    .exp-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .exp-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 8.5pt;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .exp-bullets li .d {
+      color: var(--gold);
+      flex-shrink: 0;
+      font-size: 9pt;
+      margin-top: 1px;
+      line-height: 1;
+    }
+    .sub-role {
+      margin-top: 10px;
+      page-break-inside: avoid;
+    }
+
+    /* --- Contact --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 32px;
+    }
+    .contact-item label {
+      display: block;
+      font-size: 7pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 2px;
+    }
+    .contact-item a, .contact-item span {
+      font-size: 9pt;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    /* --- Print styles --- */
+    @media print {
+      body { background: #fff; font-size: 9.5pt; }
+      .print-bar { display: none !important; }
+      .page-wrap { padding: 0; }
+      .resume { box-shadow: none; max-width: 100%; }
+      .section { padding: 16px 40px 14px; }
+      .resume-header { padding: 28px 40px 24px; }
+      a { color: inherit !important; }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print bar (hidden on print) -->
+  <div class="print-bar">
+    <p>Open in Chrome for best results. File > Print > Save as PDF. Set margins to "None" or "Minimum".</p>
+    <button onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <div class="page-wrap">
+    <div class="resume">
+
+      <!-- Header -->
+      <header class="resume-header">
+        <h1>Shahryar Sultan</h1>
+        <p class="title">Microsoft Dynamics 365 Solution Architect</p>
+        <div class="contacts">
+          <a href="mailto:your.email@example.com">your.email@example.com</a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/in/drshahryarsultan/" target="_blank">linkedin.com/in/drshahryarsultan</a>
+          <span>|</span>
+          <a href="https://github.com/s4shahryar" target="_blank">github.com/s4shahryar</a>
+          <span>|</span>
+          <span>Malaga, Spain</span>
+        </div>
+        <div class="gold-bar"></div>
+      </header>
+
+      <!-- Professional Summary -->
+      <div class="section summary">
+        <p class="section-title">Professional Summary</p>
+        <div class="gold-rule"></div>
+        <p>
+          Microsoft Dynamics 365 Solution Architect with over 8 years of experience delivering end-to-end CRM and
+          automation solutions across Dynamics 365, Power Platform, and Azure. Experienced across the full delivery
+          lifecycle: from requirements and architecture through to implementation, integration, and go-live.
+        </p>
+        <p>
+          Specialises in Dynamics 365 CE architecture, Power Platform solutions, and Azure-based integrations, with
+          hands-on capability across .NET, C#, Web API, JavaScript, and SQL. In many engagements acts as the single
+          point of contact between business stakeholders and technical teams, delivering scalable, production-ready systems.
+        </p>
+        <p class="bold">
+          Available for contract and B2B engagements. If you need a senior resource to own your Dynamics 365 or
+          Power Platform delivery end-to-end, get in touch.
+        </p>
+      </div>
+
+      <!-- Core Competencies -->
+      <div class="section">
+        <p class="section-title">Core Competencies</p>
+        <div class="gold-rule"></div>
+        <div class="two-col">
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>CRM Platform:</strong> Dynamics 365 CE, Sales, Customer Service, Customer Journeys</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Power Platform:</strong> Power Automate, Power Apps (Model-Driven and Canvas), Dataverse</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Azure Integration:</strong> Service Bus, Azure Functions, Logic Apps, API Management</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Development:</strong> .NET, C#, Web API, JavaScript, TypeScript, SQL, Plugins, Workflows</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Architecture:</strong> Solution design, integration patterns, scalability, enterprise delivery</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Delivery:</strong> End-to-end ownership, agile execution, estimation, UAT, go-live</span></div>
+        </div>
+      </div>
+
+      <!-- Selected Capabilities -->
+      <div class="section">
+        <p class="section-title">Selected Capabilities</p>
+        <div class="gold-rule"></div>
+        <div class="two-col">
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Requirements and Solution Design:</strong> Translating business objectives into scalable architecture</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>D365 Customisation:</strong> Plugins, workflows, controls, forms, views, business rules</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Third-Party Integration:</strong> REST, SOAP, middleware, event-driven, data synchronisation</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Data Migration:</strong> Schema mapping, transformation, staging, validation, cutover</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Workflow Automation:</strong> Power Automate, plugins, sync and async processing at volume</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Testing and Go-Live:</strong> UAT, deployment planning, environment management, post-launch</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Performance Optimisation:</strong> High-volume processes, batch operations, integration throughput</span></div>
+          <div class="bullet-item"><span class="diamond">&#9642;</span><span><strong>Technical Leadership:</strong> Bridging business and engineering, full lifecycle ownership</span></div>
+        </div>
+      </div>
+
+      <!-- Professional Experience -->
+      <div class="section">
+        <p class="section-title">Professional Experience</p>
+        <div class="gold-rule"></div>
+
+        <!-- Alishbit -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">Alishbit</span>
+            <span class="exp-type">Self-employed</span>
+          </div>
+          <div class="exp-meta">Aug 2025 – Present &nbsp;|&nbsp; Malaga, Spain (Hybrid)</div>
+          <div class="exp-role">MS Dynamics 365 CRM Developer</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Deliver Dynamics 365 CRM solutions end-to-end for client engagements, covering requirements, solution design, and implementation</li>
+            <li><span class="d">&#9642;</span>Act as the primary point of contact for clients, translating business needs into technical solutions and guiding delivery decisions</li>
+            <li><span class="d">&#9642;</span>Design and implement integrations using Power Automate and Azure Logic Apps to connect CRM with external systems</li>
+            <li><span class="d">&#9642;</span>Build and extend Model-Driven Apps and Canvas Apps aligned with business processes</li>
+            <li><span class="d">&#9642;</span>Develop custom business logic using plugins, workflows, and custom activities (C# .NET, JavaScript, TypeScript)</li>
+            <li><span class="d">&#9642;</span>Utilise Azure services and DevOps practices to support structured deployment and continuous delivery</li>
+          </ul>
+        </div>
+
+        <!-- Avanade -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">Avanade</span>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <div class="exp-meta">Dec 2022 – Aug 2025 &nbsp;|&nbsp; Malaga, Spain</div>
+          <div class="exp-role">Senior Analyst, MS Dynamics 365</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Contributed to solution design and delivery of Dynamics 365 CRM solutions across enterprise projects</li>
+            <li><span class="d">&#9642;</span>Collaborated with client stakeholders and internal teams to translate requirements into functional and technical solutions</li>
+            <li><span class="d">&#9642;</span>Built and extended Model-Driven Apps and Canvas Apps aligned with business processes</li>
+            <li><span class="d">&#9642;</span>Developed automation and integration components using Power Automate, Azure Logic Apps, and APIs</li>
+            <li><span class="d">&#9642;</span>Implemented custom business logic using plugins, workflows, and custom activities (C# .NET, JavaScript, TypeScript)</li>
+            <li><span class="d">&#9642;</span>Worked within DevOps-driven delivery processes, contributing to CI/CD pipelines and structured release management</li>
+          </ul>
+        </div>
+
+        <!-- Systems Limited -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">Systems Limited</span>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <div class="exp-meta">May 2021 – Dec 2022 &nbsp;|&nbsp; Islamabad, Pakistan</div>
+
+          <div class="sub-role">
+            <div class="exp-role">Senior MS Dynamics 365 CRM Technical Consultant <span class="exp-role-period">Jan 2022 – Dec 2022</span></div>
+            <ul class="exp-bullets">
+              <li><span class="d">&#9642;</span>Delivered Dynamics 365 CRM solutions across multiple client projects, covering customisation, configuration, and system enhancements</li>
+              <li><span class="d">&#9642;</span>Built and extended Model-Driven Apps and Canvas Apps; implemented custom logic using plugins and workflows (C# .NET, JavaScript, TypeScript)</li>
+              <li><span class="d">&#9642;</span>Developed automation and integration components using Power Automate and Azure Logic Apps</li>
+              <li><span class="d">&#9642;</span>Contributed to data migration using SSIS and reporting through SSRS; supported DevOps delivery via Azure DevOps and Jira</li>
+            </ul>
+          </div>
+
+          <div class="sub-role">
+            <div class="exp-role">MS Dynamics 365 CRM Technical Consultant <span class="exp-role-period">May 2021 – Feb 2022</span></div>
+            <ul class="exp-bullets">
+              <li><span class="d">&#9642;</span>Plugin development, workflows, and custom activities using C# .NET, JavaScript</li>
+              <li><span class="d">&#9642;</span>CRM customisation and configuration, MS SQL, SSRS, SSIS, Azure, Azure Logic Apps, Power Platform</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Optimal Logics -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">Optimal Logics</span>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <div class="exp-meta">Aug 2020 – May 2021 &nbsp;|&nbsp; Rawalpindi, Pakistan</div>
+          <div class="exp-role">Dynamics 365 Developer</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Plugin development, workflows, and custom activities (C# .NET, JavaScript)</li>
+            <li><span class="d">&#9642;</span>CRM customisation, MS SQL, Azure, Azure Logic Apps, DevOps, Power Platform, Power Automate</li>
+          </ul>
+        </div>
+
+        <!-- OGDCL -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">Oil and Gas Development Company Ltd.</span>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <div class="exp-meta">Feb 2019 – Feb 2020 &nbsp;|&nbsp; Islamabad, Pakistan</div>
+          <div class="exp-role">Business Intelligence Developer</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Created databases and schema objects; built SSIS packages and scheduled jobs for data migration from disparate sources into SQL Server</li>
+            <li><span class="d">&#9642;</span>Resolved performance tuning issues and created logical and physical data models in normalised 3NF</li>
+          </ul>
+        </div>
+
+        <!-- SKIF -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">SKIF Enterprises (Private) Ltd.</span>
+            <span class="exp-type">Full-time</span>
+          </div>
+          <div class="exp-meta">Nov 2017 – Feb 2019 &nbsp;|&nbsp; Multan, Pakistan</div>
+          <div class="exp-role">Business Intelligence Developer</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Developed SSIS packages for ETL, data cleansing, and custom logging; created SSRS reports for claims processing</li>
+            <li><span class="d">&#9642;</span>Built OLAP Cubes for business process analysis; maintained and upgraded C# .NET desktop systems</li>
+          </ul>
+        </div>
+
+        <!-- DynamixSol -->
+        <div class="exp-entry">
+          <div>
+            <span class="exp-company">DynamixSol</span>
+            <span class="exp-type">Part-time</span>
+          </div>
+          <div class="exp-meta">Aug 2016 – Sep 2017 &nbsp;|&nbsp; Multan, Pakistan</div>
+          <div class="exp-role">Junior C# Developer</div>
+          <ul class="exp-bullets">
+            <li><span class="d">&#9642;</span>Desktop application development using C# .NET, MS SQL, SSRS reporting</li>
+          </ul>
+        </div>
+
+      </div><!-- end experience -->
+
+      <!-- Contact -->
+      <div class="section">
+        <p class="section-title">Contact</p>
+        <div class="gold-rule"></div>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <label>Email</label>
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </div>
+          <div class="contact-item">
+            <label>LinkedIn</label>
+            <a href="https://www.linkedin.com/in/drshahryarsultan/" target="_blank">linkedin.com/in/drshahryarsultan</a>
+          </div>
+          <div class="contact-item">
+            <label>GitHub</label>
+            <a href="https://github.com/s4shahryar" target="_blank">github.com/s4shahryar</a>
+          </div>
+          <div class="contact-item">
+            <label>Location</label>
+            <span>Malaga, Andalusia, Spain</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end .resume -->
+  </div><!-- end .page-wrap -->
+
+</body>
+</html>
