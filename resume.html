@@ -58,6 +58,21 @@
       opacity: 0.7;
       cursor: wait;
     }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+    .download-link:hover { background: #d4b05a; }
 
     /* --- Document wrapper --- */
     .page-wrap {
@@ -273,8 +288,8 @@
 
   <!-- Action bar -->
   <div class="print-bar">
-    <p>Download a polished PDF copy of the resume directly from this page.</p>
-    <button id="download-pdf-button" type="button" onclick="downloadResumePdf()">Download PDF</button>
+    <p>Download the PDF version directly, or view this web version in the browser.</p>
+    <a class="download-link" href="./cv.pdf" download="Shahryar-Sultan-Resume.pdf">Download PDF</a>
   </div>
 
   <div class="page-wrap">
@@ -497,45 +512,5 @@
 
     </div><!-- end .resume -->
   </div><!-- end .page-wrap -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5c1P4AOn4K4M9DhnZZq+QkI4d0JY9l8D0l3Kc7W82dManIeZDV4SSQSSHqzTeWY5Avzk1l3VQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    async function downloadResumePdf() {
-      const button = document.getElementById('download-pdf-button');
-      const resume = document.querySelector('.resume');
-
-      if (!button || !resume || typeof html2pdf === 'undefined') {
-        return;
-      }
-
-      const originalLabel = button.textContent;
-      button.disabled = true;
-      button.textContent = 'Preparing PDF...';
-
-      try {
-        await html2pdf().set({
-          margin: [14, 12, 14, 12],
-          filename: 'Shahryar-Sultan-Resume.pdf',
-          image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: {
-            scale: 2,
-            useCORS: true,
-            backgroundColor: '#ffffff'
-          },
-          jsPDF: {
-            unit: 'mm',
-            format: 'a4',
-            orientation: 'portrait'
-          },
-          pagebreak: {
-            mode: ['css', 'legacy']
-          }
-        }).from(resume).save();
-      } finally {
-        button.disabled = false;
-        button.textContent = originalLabel;
-      }
-    }
-  </script>
 </body>
 </html>
