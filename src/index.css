@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-blue-100 text-blue-900;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 py-20 md:py-28;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest text-blue-700 uppercase mb-3;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 mb-4;
+  }
+
+  .section-divider {
+    @apply border-t border-slate-100;
+  }
+}
