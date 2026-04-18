@@ -250,16 +250,17 @@
 
     /* --- Print styles --- */
     @media print {
-      body { background: #fff; font-size: 9.5pt; }
+      html, body { background: #fff !important; }
+      body { font-size: 9.5pt; }
       .print-bar { display: none !important; }
       .page-wrap { padding: 0; }
-      .resume { box-shadow: none; max-width: 100%; }
+      .resume { box-shadow: none; max-width: 100%; width: 100%; }
       .section { padding: 16px 40px 14px; }
       .resume-header { padding: 28px 40px 24px; }
       a { color: inherit !important; }
       @page {
         size: A4;
-        margin: 15mm 0 12mm 0;
+        margin: 18mm 12mm 14mm 12mm;
       }
     }
   </style>
@@ -268,7 +269,7 @@
 
   <!-- Print bar (hidden on print) -->
   <div class="print-bar">
-    <p>Open in Chrome for best results. File > Print > Save as PDF. Set margins to "None" or "Minimum".</p>
+    <p>Open in Chrome for best results. File &gt; Print &gt; Save as PDF. Leave browser margins on Default so the built-in page spacing is preserved.</p>
     <button onclick="window.print()">Print / Save as PDF</button>
   </div>
 
