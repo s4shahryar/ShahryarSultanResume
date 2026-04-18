@@ -164,8 +164,6 @@
     /* --- Experience --- */
     .exp-entry {
       margin-bottom: 18px;
-      padding-left: 12px;
-      border-left: 2px solid rgba(201,168,76,0.35);
       page-break-inside: avoid;
     }
     .exp-entry:last-child { margin-bottom: 0; }
@@ -261,7 +259,10 @@
       a { color: inherit !important; }
       @page {
         size: A4;
-        margin: 0;
+        margin: 12mm 0;
+      }
+      @page :first {
+        margin-top: 0;
       }
     }
   </style>
