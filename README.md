@@ -1,105 +1,77 @@
-# D365 Solution Architect - Resume Site
+# Shahryar Sultan — Resume
 
-A clean, professional single-page resume website built with React, Vite, and Tailwind CSS. Designed for deployment to GitHub Pages.
+A single-page, mobile-responsive, **printable**, **ATS-friendly** resume built with plain HTML and
+Tailwind CSS. Layout adapted from the
+[HTML Resume Template by Owen Gretzinger](https://github.com/owengretzinger/html-resume-template)
+(released under the Unlicense).
 
----
-
-## Local Development
-
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Start development server
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+**Live:** https://s4shahryar.github.io/ShahryarSultanResume/
 
 ---
 
-## Build
+## How it works
 
-```bash
-npm run build
-```
+The site is plain static HTML — [`index.html`](index.html) plus a pre-compiled Tailwind stylesheet
+([`assets/output.css`](assets/output.css)). No JavaScript and no runtime CDN are required, so it stays
+styled offline and loads instantly. You can open `index.html` directly in a browser or deploy the
+folder as-is.
 
-Output is generated in the `dist/` folder.
-
-To preview the production build locally:
-
-```bash
-npm run preview
-```
-
----
-
-## Deploy to GitHub Pages
-
-### Step 1 - Set your repository name
-
-Open `vite.config.js` and update `REPO_NAME` to match your GitHub repository name:
-
-```js
-const REPO_NAME = 'GithubResume'  // replace with your actual repo name
-```
-
-If you are deploying to `username.github.io` (root, no sub-path), set:
-
-```js
-base: '/',
-```
-
-### Step 2 - Deploy
-
-```bash
-npm run deploy
-```
-
-This runs the build and pushes the `dist/` folder to the `gh-pages` branch of your repository.
-
-### Step 3 - Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Navigate to Settings > Pages
-3. Under Source, select `gh-pages` branch and `/ (root)`
-4. Save
-
-Your site will be live at `https://your-username.github.io/GithubResume/`
-
----
-
-## Customising Content
-
-All content is defined directly in the component files. No separate data file is needed.
-
-| What to change | Where to edit |
+| File | Purpose |
 |---|---|
-| Hero headline and stats | `src/components/Hero.jsx` |
-| About text | `src/components/About.jsx` |
-| Core Expertise cards | `src/components/CoreExpertise.jsx` |
-| Selected Capabilities list | `src/components/SelectedCapabilities.jsx` |
-| Experience Highlights cards | `src/components/ExperienceHighlights.jsx` |
-| LinkedIn, GitHub, Email, CV link | `src/components/Contact.jsx` (top of file) |
-| Page title and meta description | `index.html` |
-| Site name in nav and footer | `src/components/Nav.jsx`, `src/components/Footer.jsx` |
-| Accent colour | `tailwind.config.js` under `colors.accent` |
+| `index.html` | The entire resume (markup, SEO, structured data) |
+| `assets/output.css` | Compiled Tailwind CSS (only the classes the page uses) |
+| `favicon.svg` | Site icon |
+| `robots.txt` | Allows crawling; points to the sitemap |
+| `sitemap.xml` | Single-page sitemap for search engines |
 
 ---
 
-## Adding Your CV
+## Editing your content
 
-Place your CV PDF in the `public/` folder as `your-cv.pdf` and update the `CV_URL` constant in `src/components/Contact.jsx`:
+Open `index.html` and edit the text directly. Anything in `[square brackets]` is a **placeholder** to
+replace with your real details:
 
-```js
-const CV_URL = '/your-cv.pdf'
-```
+- **Contact** — email, phone, location, LinkedIn (appears in both the desktop and mobile headers)
+- **Experience** — company names, dates, and bullets under *Professional Experience*
+- **Education** and **Certifications** (left column)
+
+The structured-data block (`<script type="application/ld+json">` in the `<head>`) and the LinkedIn
+link both reference `linkedin.com/in/your-profile` — update those too.
+
+> **Changing the styling?** `assets/output.css` only contains the Tailwind classes currently used in
+> `index.html`. If you add *new* Tailwind classes, regenerate it:
+>
+> ```bash
+> npx tailwindcss@3 -i input.css -o assets/output.css --content ./index.html --minify
+> ```
+>
+> (where `input.css` contains the three `@tailwind base; @tailwind components; @tailwind utilities;`
+> directives). Editing existing text never needs a rebuild.
 
 ---
 
-## Tech Stack
+## Printing / exporting to PDF
 
-- [React 18](https://react.dev/)
-- [Vite 5](https://vitejs.dev/)
-- [Tailwind CSS 3](https://tailwindcss.com/)
-- [gh-pages](https://github.com/tschaub/gh-pages) for deployment
+Press **Ctrl+P** (Windows) or **Cmd+P** (Mac). The layout removes the background, shadow, and rounded
+corners for print and targets a single Letter-size page. To keep the accent colours in the PDF, enable
+**"Background graphics"** under *More settings* in the print dialog.
+
+---
+
+## Deploying to GitHub Pages
+
+Because this is a static site served from the repository root:
+
+1. Go to **Settings → Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Choose the **`main`** branch and **`/ (root)`** folder, then **Save**
+
+The site will be live at `https://s4shahryar.github.io/ShahryarSultanResume/`.
+
+---
+
+## SEO checklist
+
+Already included: page `<title>` and description with your name, `author` meta, canonical URL,
+Open Graph + Twitter cards (with a 1200×630 `og-image.png`), `schema.org/Person` structured data,
+`robots.txt`, and `sitemap.xml`.

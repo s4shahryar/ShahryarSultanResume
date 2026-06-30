@@ -1,36 +1,322 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<!--
+  Resume layout adapted from the HTML Resume Template by Owen Gretzinger
+  (https://github.com/owengretzinger/html-resume-template), released under the Unlicense.
+  Mobile-responsive, printable (Ctrl/Cmd+P), and ATS-friendly.
+-->
+<html lang="en-GB">
 
-    <!-- SEO -->
-    <title>Microsoft Dynamics 365 Solution Architect | Contract Consultant</title>
-    <meta name="description" content="Senior Microsoft Dynamics 365 Solution Architect available for contract and B2B engagements. Specialising in D365 CE, Power Platform, Azure integrations, and end-to-end CRM delivery." />
-    <meta name="keywords" content="Dynamics 365 Solution Architect, D365 CE, Power Platform, Azure Integration, CRM Consultant, Contract, B2B, Microsoft Dynamics" />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#dbeafe" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Microsoft Dynamics 365 Solution Architect | Contract Consultant" />
-    <meta property="og:description" content="Senior Microsoft Dynamics 365 Solution Architect available for contract and B2B engagements. Specialising in D365 CE, Power Platform, Azure integrations, and end-to-end CRM delivery." />
-    <meta property="og:image" content="/og-image.png" />
+  <!-- SEO -->
+  <title>Shahryar Sultan | Microsoft Dynamics 365 Solution Architect</title>
+  <meta name="description"
+    content="Shahryar Sultan — Microsoft Dynamics 365 Solution Architect based in Málaga, Spain, with 8+ years delivering CRM, Power Platform, and Azure integration solutions for clients including Zurich Insurance, BDO UK, and First Abu Dhabi Bank." />
+  <meta name="author" content="Shahryar Sultan" />
+  <meta name="keywords"
+    content="Shahryar Sultan, Dynamics 365 Solution Architect, D365 CE, Dynamics 365 Sales, Customer Insights, Power Platform, Dataverse, Azure Logic Apps, CRM Consultant, Málaga, Spain" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://s4shahryar.github.io/ShahryarSultanResume/" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Microsoft Dynamics 365 Solution Architect | Contract Consultant" />
-    <meta name="twitter:description" content="Senior Microsoft Dynamics 365 Solution Architect. D365 CE, Power Platform, Azure Integrations, End-to-End CRM Delivery." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://s4shahryar.github.io/ShahryarSultanResume/" />
+  <meta property="og:title" content="Shahryar Sultan | Microsoft Dynamics 365 Solution Architect" />
+  <meta property="og:description"
+    content="Microsoft Dynamics 365 Solution Architect in Málaga, Spain. 8+ years across D365 Sales, Customer Insights, Power Platform, and Azure integrations." />
+  <meta property="og:image" content="https://s4shahryar.github.io/ShahryarSultanResume/og-image.png" />
+  <meta property="og:site_name" content="Shahryar Sultan — Resume" />
+  <meta property="profile:first_name" content="Shahryar" />
+  <meta property="profile:last_name" content="Sultan" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shahryar Sultan | Microsoft Dynamics 365 Solution Architect" />
+  <meta name="twitter:description"
+    content="Microsoft Dynamics 365 Solution Architect in Málaga, Spain. D365 Sales, Customer Insights, Power Platform, Azure." />
+  <meta name="twitter:image" content="https://s4shahryar.github.io/ShahryarSultanResume/og-image.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Compiled Tailwind CSS (static, no build/JS needed at runtime) -->
+  <link href="assets/output.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    @media print {
+      @page { margin: 0; }
+      html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+
+  <!-- Structured data: helps search engines understand who this is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shahryar Sultan",
+    "jobTitle": "Microsoft Dynamics 365 Solution Architect",
+    "description": "Microsoft Dynamics 365 Solution Architect with 8+ years delivering CRM, Power Platform, and Azure integration solutions across enterprise environments.",
+    "url": "https://s4shahryar.github.io/ShahryarSultanResume/",
+    "email": "mailto:s4shahryar@gmail.com",
+    "telephone": "+34607302224",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Málaga",
+      "addressRegion": "Andalusia",
+      "addressCountry": "ES"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Bahauddin Zakariya University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/drshahryarsultan",
+      "https://github.com/s4shahryar"
+    ],
+    "knowsAbout": [
+      "Microsoft Dynamics 365 Sales",
+      "Dynamics 365 Customer Insights",
+      "Dynamics 365 Project Operations",
+      "Power Platform",
+      "Power Automate",
+      "Azure Logic Apps",
+      "System Integration",
+      ".NET",
+      "C#",
+      "CRM Architecture"
+    ]
+  }
+  </script>
+</head>
+
+<body class="font-sans text-slate-800">
+  <div class="max-w-full min-h-screen bg-blue-100 px-4 print:px-0 py-10 print:py-0">
+    <!-- resume page -->
+    <main class="w-full sm:max-w-[52rem] bg-white rounded-3xl shadow-xl mx-auto
+                print:w-[52rem] print:rounded-none print:shadow-none">
+      <div class="w-full h-full flex flex-col p-6 md:p-16 print:p-16">
+
+        <!-- ===== Header ===== -->
+        <!-- desktop header -->
+        <header class="w-full hidden sm:flex print:flex justify-between items-start gap-6">
+          <div class="flex-1">
+            <h1 class="text-4xl font-[900] leading-tight text-slate-900">Shahryar<br />Sultan</h1>
+            <p class="mt-2 text-base font-medium text-blue-700">Microsoft Dynamics 365 Solution Architect</p>
+          </div>
+          <div class="flex-1 flex sm:justify-end print:justify-end">
+            <div class="flex flex-col w-fit sm:items-end print:items-end gap-[3px] text-sm text-slate-600">
+              <a href="mailto:s4shahryar@gmail.com" class="text-blue-700 hover:underline print:underline">s4shahryar@gmail.com</a>
+              <a href="tel:+34607302224" class="hover:underline print:no-underline">+34 607 302 224</a>
+              <p>Málaga, Spain</p>
+              <a href="https://www.linkedin.com/in/drshahryarsultan" target="_blank" rel="noreferrer"
+                class="text-blue-700 hover:underline print:underline">linkedin.com/in/drshahryarsultan</a>
+              <a href="https://github.com/s4shahryar" target="_blank" rel="noreferrer"
+                class="text-blue-700 hover:underline print:underline">github.com/s4shahryar</a>
+            </div>
+          </div>
+        </header>
+
+        <!-- mobile header -->
+        <header class="sm:hidden print:hidden">
+          <h1 class="text-3xl [@media(min-width:400px)]:text-4xl font-[900] leading-tight text-slate-900">
+            Shahryar Sultan</h1>
+          <p class="mt-1.5 text-base font-medium text-blue-700">Microsoft Dynamics 365 Solution Architect</p>
+          <div class="mt-4 flex flex-col gap-[3px] text-sm text-slate-600">
+            <a href="mailto:s4shahryar@gmail.com" class="text-blue-700 hover:underline">s4shahryar@gmail.com</a>
+            <a href="tel:+34607302224" class="hover:underline">+34 607 302 224</a>
+            <p>Málaga, Spain</p>
+            <a href="https://www.linkedin.com/in/drshahryarsultan" target="_blank" rel="noreferrer"
+              class="text-blue-700 hover:underline">linkedin.com/in/drshahryarsultan</a>
+            <a href="https://github.com/s4shahryar" target="_blank" rel="noreferrer"
+              class="text-blue-700 hover:underline">github.com/s4shahryar</a>
+          </div>
+        </header>
+
+        <!-- divider -->
+        <hr class="my-6 border-slate-200" />
+
+        <!-- ===== Body ===== -->
+        <div class="w-full flex flex-col sm:flex-row print:flex-row gap-8 print:gap-10">
+
+          <!-- ===== Left column ===== -->
+          <div class="sm:w-[38%] print:w-[38%] flex flex-col gap-7">
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Profile</h2>
+              <p class="text-sm leading-relaxed text-slate-700">
+                Dynamics 365 Solution Architect with 8+ years delivering CRM solutions across enterprise
+                environments. Strong background in Dynamics 365 Sales, Customer Insights, and Project
+                Operations, combined with Azure-based integration architecture and Power Platform delivery.
+                Acts as the primary point of contact between business stakeholders and technical teams,
+                translating requirements into scalable, maintainable solutions.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Notable Clients</h2>
+              <p class="text-sm leading-relaxed text-slate-700">
+                Zurich Insurance Group, BDO UK, Irish Department of Justice, First Abu Dhabi Bank, and Mobily.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Skills</h2>
+              <div class="flex flex-col gap-3">
+                <div>
+                  <p class="text-xs font-semibold text-slate-800 mb-1">Dynamics 365 &amp; Power Platform</p>
+                  <p class="text-sm text-slate-600 leading-snug">Dynamics 365 Sales, Customer Insights, Project Operations, Model-Driven Apps, Canvas Apps, Power Automate</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-800 mb-1">Architecture &amp; Integration</p>
+                  <p class="text-sm text-slate-600 leading-snug">Solution Design, Azure Logic Apps, APIs, System Integration, Data Migration</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-800 mb-1">Development</p>
+                  <p class="text-sm text-slate-600 leading-snug">C# .NET, Plugins, Workflows, Custom Activities, JavaScript, TypeScript</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-800 mb-1">Data &amp; Reporting</p>
+                  <p class="text-sm text-slate-600 leading-snug">SSIS, SSRS, SQL Server</p>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-slate-800 mb-1">Tools &amp; Platforms</p>
+                  <p class="text-sm text-slate-600 leading-snug">Azure, Azure DevOps, Jira</p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Education</h2>
+              <div class="mb-3">
+                <p class="text-sm font-semibold text-slate-900">BSc (Hons) Computer Engineering</p>
+                <p class="text-sm text-slate-600">Bahauddin Zakariya University</p>
+                <p class="text-xs text-slate-400 mt-0.5">2013 – 2017</p>
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">FSc, Pre-Engineering</p>
+                <p class="text-sm text-slate-600">Govt. Emerson College, Multan</p>
+                <p class="text-xs text-slate-400 mt-0.5">2011 – 2013</p>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Certifications</h2>
+              <ul class="space-y-1.5 text-sm text-slate-700">
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Microsoft Certified: Power Platform Developer</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Microsoft Certified: Power Platform App Maker Associate</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Microsoft Certified: Power Platform Fundamentals (PL-900)</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Microsoft Certified: Dynamics 365 Fundamentals (CRM)</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>SQL for Data Science — UC Davis</li>
+              </ul>
+            </section>
+
+          </div>
+
+          <!-- ===== Right column ===== -->
+          <div class="sm:w-[62%] print:w-[62%] flex flex-col gap-6">
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Professional Experience</h2>
+
+              <!-- 1 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Senior MS Dynamics 365 CRM Developer / Consultant</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">Aug 2025 – Present</span>
+                </div>
+                <p class="text-sm text-blue-700">Alishbit, S.L. · Self-employed</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Deliver Dynamics 365 CRM solutions end-to-end — requirements, solution design, and implementation — acting as the primary point of contact for clients.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Design and implement integrations using Power Automate and Azure Logic Apps to connect CRM with external systems.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Build and extend Model-Driven and Canvas Apps, and develop custom business logic via plugins, workflows, and custom activities (C# .NET, JavaScript, TypeScript).</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Provide production support and apply Azure and DevOps practices for structured deployment and continuous delivery.</li>
+                </ul>
+              </div>
+
+              <!-- 2 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Senior Analyst, MS Dynamics 365</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">Dec 2022 – Aug 2025</span>
+                </div>
+                <p class="text-sm text-blue-700">Avanade</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Delivered Dynamics 365 CRM solutions across enterprise projects — customisation, configuration, and system enhancements.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Translated client requirements into functional and technical solutions; built Model-Driven and Canvas Apps aligned with business processes.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Developed automation and integrations with Power Automate, Azure Logic Apps, and APIs; implemented plugins and custom activities (C# .NET, JS, TS).</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Worked within DevOps-driven delivery, contributing to CI/CD pipelines and structured release management.</li>
+                </ul>
+              </div>
+
+              <!-- 3 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Senior MS Dynamics 365 CRM Technical Consultant</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">May 2021 – Dec 2022</span>
+                </div>
+                <p class="text-sm text-blue-700">Systems Limited</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Delivered D365 CRM solutions across multiple client projects, covering customisation, configuration, and enhancements.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Implemented custom business logic (C# .NET, JS, TS) across online and on-premise environments; built automation with Power Automate and Azure Logic Apps.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Contributed to data migration (SSIS) and reporting (SSRS); supported deployments and release management with Azure DevOps and Jira.</li>
+                </ul>
+              </div>
+
+              <!-- 4 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Dynamics 365 Developer</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">Aug 2020 – May 2021</span>
+                </div>
+                <p class="text-sm text-blue-700">Optimal Logics</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Built D365 CRM plugins and workflows (C# .NET, JavaScript, MS SQL) and supported Power Platform delivery.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Developed integrations and automation with Azure Logic Apps and Power Automate, supported via Azure DevOps.</li>
+                </ul>
+              </div>
+
+              <!-- 5 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Business Intelligence Developer</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">Feb 2019 – Feb 2020</span>
+                </div>
+                <p class="text-sm text-blue-700">Oil &amp; Gas Development Company Ltd.</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Built SSIS packages and scheduled jobs to migrate data across disparate sources and SQL Server; designed schema, stored procedures, and 3NF data models.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Performed root-cause analysis on failures and resolved performance-tuning issues.</li>
+                </ul>
+              </div>
+
+              <!-- 6 -->
+              <div>
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Business Intelligence Developer</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">Nov 2017 – Feb 2019</span>
+                </div>
+                <p class="text-sm text-blue-700">SKIF Enterprises Pvt Ltd.</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Built SSIS packages for data cleansing, logging, and error handling; created SSRS reports and OLAP cubes for claims analysis.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Maintained and upgraded C# .NET desktop systems.</li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
