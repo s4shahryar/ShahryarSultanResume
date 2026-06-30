@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://s4shahryar.github.io/ShahryarSultanResume/sitemap.xml

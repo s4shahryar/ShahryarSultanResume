@@ -1,36 +1,262 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<!--
+  Resume layout adapted from the HTML Resume Template by Owen Gretzinger
+  (https://github.com/owengretzinger/html-resume-template), released under the Unlicense.
+  Mobile-responsive, printable (Ctrl/Cmd+P), and ATS-friendly.
+-->
+<html lang="en-GB">
 
-    <!-- SEO -->
-    <title>Microsoft Dynamics 365 Solution Architect | Contract Consultant</title>
-    <meta name="description" content="Senior Microsoft Dynamics 365 Solution Architect available for contract and B2B engagements. Specialising in D365 CE, Power Platform, Azure integrations, and end-to-end CRM delivery." />
-    <meta name="keywords" content="Dynamics 365 Solution Architect, D365 CE, Power Platform, Azure Integration, CRM Consultant, Contract, B2B, Microsoft Dynamics" />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#dbeafe" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Microsoft Dynamics 365 Solution Architect | Contract Consultant" />
-    <meta property="og:description" content="Senior Microsoft Dynamics 365 Solution Architect available for contract and B2B engagements. Specialising in D365 CE, Power Platform, Azure integrations, and end-to-end CRM delivery." />
-    <meta property="og:image" content="/og-image.png" />
+  <!-- SEO -->
+  <title>Shahryar Sultan | Microsoft Dynamics 365 Solution Architect</title>
+  <meta name="description"
+    content="Shahryar Sultan — Microsoft Dynamics 365 Solution Architect with 8+ years delivering end-to-end CRM and automation across D365 CE, Power Platform, and Azure. Available for contract and B2B engagements." />
+  <meta name="author" content="Shahryar Sultan" />
+  <meta name="keywords"
+    content="Shahryar Sultan, Dynamics 365 Solution Architect, D365 CE, Power Platform, Dataverse, Azure Integration, CRM Consultant, Contract, B2B, Microsoft Dynamics" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://s4shahryar.github.io/ShahryarSultanResume/" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Microsoft Dynamics 365 Solution Architect | Contract Consultant" />
-    <meta name="twitter:description" content="Senior Microsoft Dynamics 365 Solution Architect. D365 CE, Power Platform, Azure Integrations, End-to-End CRM Delivery." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://s4shahryar.github.io/ShahryarSultanResume/" />
+  <meta property="og:title" content="Shahryar Sultan | Microsoft Dynamics 365 Solution Architect" />
+  <meta property="og:description"
+    content="Microsoft Dynamics 365 Solution Architect. 8+ years across D365 CE, Power Platform, and Azure. Available for contract and B2B engagements." />
+  <meta property="og:image" content="https://s4shahryar.github.io/ShahryarSultanResume/og-image.png" />
+  <meta property="og:site_name" content="Shahryar Sultan — Resume" />
+  <meta property="profile:first_name" content="Shahryar" />
+  <meta property="profile:last_name" content="Sultan" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shahryar Sultan | Microsoft Dynamics 365 Solution Architect" />
+  <meta name="twitter:description"
+    content="Microsoft Dynamics 365 Solution Architect. D365 CE, Power Platform, Azure. Available for contract and B2B engagements." />
+  <meta name="twitter:image" content="https://s4shahryar.github.io/ShahryarSultanResume/og-image.png" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Compiled Tailwind CSS (static, no build/JS needed at runtime) -->
+  <link href="assets/output.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+    @media print {
+      @page { margin: 0; }
+      html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+
+  <!-- Structured data: helps search engines understand who this is -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shahryar Sultan",
+    "jobTitle": "Microsoft Dynamics 365 Solution Architect",
+    "description": "Microsoft Dynamics 365 Solution Architect with 8+ years delivering end-to-end CRM and automation across D365 CE, Power Platform, and Azure.",
+    "url": "https://s4shahryar.github.io/ShahryarSultanResume/",
+    "sameAs": [
+      "https://github.com/s4shahryar",
+      "https://www.linkedin.com/in/your-profile"
+    ],
+    "knowsAbout": [
+      "Microsoft Dynamics 365 CE",
+      "Power Platform",
+      "Microsoft Dataverse",
+      "Azure Integration",
+      "Power Automate",
+      ".NET",
+      "C#",
+      "Web API",
+      "CRM Architecture"
+    ]
+  }
+  </script>
+</head>
+
+<body class="font-sans text-slate-800">
+  <div class="max-w-full min-h-screen bg-blue-100 px-4 print:px-0 py-10 print:py-0">
+    <!-- resume page -->
+    <main class="w-full sm:max-w-[52rem] lg:min-h-[67rem] bg-white rounded-3xl shadow-xl mx-auto
+                print:w-[52rem] print:rounded-none print:shadow-none">
+      <div class="w-full h-full flex flex-col p-6 md:p-16 print:p-16">
+
+        <!-- ===== Header ===== -->
+        <!-- desktop header -->
+        <header class="w-full hidden sm:flex print:flex justify-between items-start gap-6">
+          <div class="flex-1">
+            <h1 class="text-4xl font-[900] leading-tight text-slate-900">Shahryar<br />Sultan</h1>
+            <p class="mt-2 text-base font-medium text-blue-700">Microsoft Dynamics 365 Solution Architect</p>
+          </div>
+          <div class="flex-1 flex sm:justify-end print:justify-end">
+            <div class="flex flex-col w-fit sm:items-end print:items-end gap-[3px] text-sm text-slate-600">
+              <p>[your.email@example.com]</p>
+              <p>[+44 0000 000000]</p>
+              <p>[City, United Kingdom]</p>
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer"
+                class="text-blue-700 hover:underline print:underline">linkedin.com/in/your-profile</a>
+              <a href="https://github.com/s4shahryar" target="_blank" rel="noreferrer"
+                class="text-blue-700 hover:underline print:underline">github.com/s4shahryar</a>
+            </div>
+          </div>
+        </header>
+
+        <!-- mobile header -->
+        <header class="sm:hidden print:hidden">
+          <h1 class="text-3xl [@media(min-width:400px)]:text-4xl font-[900] leading-tight text-slate-900">
+            Shahryar Sultan</h1>
+          <p class="mt-1.5 text-base font-medium text-blue-700">Microsoft Dynamics 365 Solution Architect</p>
+          <div class="mt-4 flex flex-col gap-[3px] text-sm text-slate-600">
+            <p>[your.email@example.com]</p>
+            <p>[+44 0000 000000]</p>
+            <p>[City, United Kingdom]</p>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer"
+              class="text-blue-700 hover:underline">linkedin.com/in/your-profile</a>
+            <a href="https://github.com/s4shahryar" target="_blank" rel="noreferrer"
+              class="text-blue-700 hover:underline">github.com/s4shahryar</a>
+          </div>
+        </header>
+
+        <!-- divider -->
+        <hr class="my-6 border-slate-200" />
+
+        <!-- ===== Body ===== -->
+        <div class="w-full flex flex-col sm:flex-row print:flex-row gap-8 print:gap-10">
+
+          <!-- ===== Left column ===== -->
+          <div class="flex-1 flex flex-col gap-7">
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Profile</h2>
+              <p class="text-sm leading-relaxed text-slate-700">
+                Microsoft Dynamics 365 Solution Architect with over 8 years of experience delivering
+                end-to-end CRM and automation solutions across Dynamics 365, Power Platform, and Azure.
+                I take ownership of the full delivery lifecycle — from requirements and architecture
+                through to implementation, integration, and go-live — often acting as the single point of
+                contact between business stakeholders and technical teams. Available for contract and B2B
+                engagements.
+              </p>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Core Skills</h2>
+              <ul class="space-y-1.5 text-sm text-slate-700">
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Dynamics 365 CE solution architecture</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Power Platform &amp; Dataverse</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Azure-based integration design</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>CRM automation &amp; Power Automate</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>End-to-end delivery ownership</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Data migration &amp; transformation</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>Technical leadership across teams</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Technical Stack</h2>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Dynamics 365 CE</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Power Platform</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Dataverse</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Azure</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Power Automate</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">.NET / C#</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">Web API</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">SQL</span>
+                <span class="text-xs bg-blue-50 text-blue-800 rounded px-2 py-1 print:border print:border-blue-200">JavaScript</span>
+              </div>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Education</h2>
+              <p class="text-sm font-semibold text-slate-900">[Degree, e.g. BSc Computer Science]</p>
+              <p class="text-sm text-slate-600">[University Name]</p>
+              <p class="text-xs text-slate-400 mt-0.5">[Start Year – End Year]</p>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Certifications</h2>
+              <ul class="space-y-1.5 text-sm text-slate-700">
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>[e.g. PL-600: Power Platform Solution Architect]</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>[e.g. MB-280: Dynamics 365 Customer Experience]</li>
+                <li class="flex gap-2"><span class="text-blue-700">▹</span>[Add or remove certifications]</li>
+              </ul>
+            </section>
+
+          </div>
+
+          <!-- ===== Right column ===== -->
+          <div class="flex-1 flex flex-col gap-7">
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Professional Experience</h2>
+
+              <!-- Experience entry 1 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Senior Dynamics 365 Solution Architect</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">[Mon YYYY – Present]</span>
+                </div>
+                <p class="text-sm text-blue-700">[Company Name] · [Location / Remote]</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Owned full-lifecycle Dynamics 365 CE delivery — solution architecture, configuration, customisation, integration design, UAT coordination, and production go-live.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Acted as single point of contact between business stakeholders and technical teams, delivering scalable, production-ready systems.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Designed high-volume automation across sales, service, and marketing using D365, Power Automate, and custom plugin architecture.</li>
+                </ul>
+              </div>
+
+              <!-- Experience entry 2 -->
+              <div class="mb-5">
+                <div class="flex justify-between items-baseline gap-3">
+                  <h3 class="text-sm font-semibold text-slate-900">Dynamics 365 Consultant / Developer</h3>
+                  <span class="text-xs text-slate-400 whitespace-nowrap">[Mon YYYY – Mon YYYY]</span>
+                </div>
+                <p class="text-sm text-blue-700">[Company Name] · [Location / Remote]</p>
+                <ul class="mt-2 space-y-1.5 text-sm text-slate-700">
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Built process automation, model-driven apps, and custom connectors on Power Platform and Dataverse at enterprise scale.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Delivered Azure-based integration layers (Service Bus, Functions, Logic Apps) and custom .NET / Web API services connecting D365 to external platforms.</li>
+                  <li class="flex gap-2"><span class="text-blue-700 mt-px">•</span>Optimised performance for high-volume processes and supported clients across multiple sectors.</li>
+                </ul>
+              </div>
+
+              <p class="text-xs text-slate-400 italic">[Add earlier roles, or replace the entries above with your full work history.]</p>
+            </section>
+
+            <section>
+              <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Selected Delivery Highlights</h2>
+
+              <div class="mb-4">
+                <h3 class="text-sm font-semibold text-slate-900">End-to-End Dynamics 365 Delivery</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Full lifecycle ownership of D365 CE implementations across multiple enterprise engagements — architecture from inception, stakeholder liaison, and production-ready delivery with post-go-live support.</p>
+              </div>
+
+              <div class="mb-4">
+                <h3 class="text-sm font-semibold text-slate-900">Power Platform Automation</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Designed and delivered Power Automate flows, model-driven and canvas apps, and Dataverse schema/governance, reducing manual overhead and enabling scalable, repeatable operations.</p>
+              </div>
+
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Azure &amp; .NET Integrations</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Built resilient, high-throughput integration layers and backend services using Azure Service Bus, Functions, and Logic Apps alongside custom .NET plugins and Web API middleware.</p>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
