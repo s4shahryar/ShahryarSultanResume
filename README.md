@@ -1,127 +1,93 @@
-# Shahryar Sultan - Resume
+# Shahryar Sultan
 
-The personal resume site of **Shahryar Sultan**, Microsoft Dynamics 365 Solution Architect
-(Malaga, Spain). A single-page, mobile-responsive, **printable**, **ATS-friendly**, and
-**search-optimized** resume built with plain HTML and Tailwind CSS.
+## Microsoft Dynamics 365 Solution Architect | Malaga, Spain
 
-**Live:** https://s4shahryar.github.io/ShahryarSultanResume/
+**Live resume:** https://s4shahryar.github.io/ShahryarSultanResume/
 
-Layout adapted from the
-[HTML Resume Template by Owen Gretzinger](https://github.com/owengretzinger/html-resume-template)
-(released under the Unlicense).
+I am a Microsoft Dynamics 365 Solution Architect with over 8 years of experience delivering CRM
+solutions across enterprise environments. I specialise in Dynamics 365 Sales, Customer Insights, and
+Project Operations, combined with Azure-based integration architecture and Power Platform delivery.
+I act as the primary point of contact between business stakeholders and technical teams, translating
+requirements into scalable, maintainable solutions, and I lead delivery end-to-end across solution
+design, system integration, and the full delivery lifecycle, with a strong focus on performance,
+scalability, and clean architecture.
 
----
-
-## How it works
-
-The site is plain static HTML - [`index.html`](index.html) plus a pre-compiled Tailwind stylesheet
-([`assets/output.css`](assets/output.css)). No JavaScript and no runtime CDN are required, so the page
-is fully rendered in the HTML itself. That matters for SEO: crawlers and ATS parsers read the real
-content directly instead of having to execute JavaScript, and the page loads instantly.
-
-The entire resume text is **plain ASCII** (no smart dashes, fancy bullet glyphs, or accented
-characters), which keeps it clean when copied into application forms or parsed by ATS software.
-
-| File | Purpose |
-|---|---|
-| `index.html` | The entire resume - markup, content, SEO meta, and structured data |
-| `assets/output.css` | Compiled Tailwind CSS (only the classes the page uses, ~9 KB) |
-| `og-image.png` | 1200x630 social/search preview card |
-| `apple-touch-icon.png` | 180x180 icon for iOS home screens and crawlers |
-| `favicon.svg` | Browser tab icon |
-| `robots.txt` | Allows crawling; points to the sitemap |
-| `sitemap.xml` | Single-page sitemap for search engines |
+I have delivered Dynamics 365 and Power Platform solutions for clients including **Zurich Insurance
+Group, BDO UK, the Irish Department of Justice, First Abu Dhabi Bank, and Mobily.**
 
 ---
 
-## SEO optimizations
+## What I do
 
-This site is tuned for two goals: ranking for the name query **"Shahryar Sultan"** and presenting
-a rich, accurate preview when the URL is shared. Everything below is already implemented in
-`index.html`.
+As a Microsoft Dynamics 365 Solution Architect and CRM consultant, I help organisations design,
+build, and integrate Dynamics 365 and Power Platform solutions:
 
-### On-page (done)
-
-- **Name-first title** (59 chars): `Shahryar Sultan | Microsoft Dynamics 365 Solution Architect`
-- **Meta description** (~148 chars, no truncation) with name, role, and location
-- **Single `<h1>`** containing the full name; clean `h2`/`h3` section hierarchy
-- **Canonical URL** to prevent duplicate-URL dilution
-- **`author` meta** and `lang="en-GB"`
-- **Robots directives**: `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`
-  for full rich display in results
-- **Open Graph + Twitter cards**, including absolute image URL, `og:image:width/height/alt`,
-  `og:locale`, and `twitter:image:alt`
-- **`schema.org/Person` JSON-LD** with `name`, `jobTitle`, `description`, `image`, `email`,
-  `worksFor`, `address`, `alumniOf`, `sameAs` (LinkedIn + GitHub), and `knowsAbout` (key skills)
-- **Crawlability**: `robots.txt` and `sitemap.xml` (with `lastmod`)
-- **Keyword coverage** in real content: D365 Sales, Customer Insights, Project Operations, Power
-  Platform, Dataverse, Azure Logic Apps, plus named clients (Zurich Insurance, BDO UK, First Abu
-  Dhabi Bank, etc.)
-
-### Off-page (your action - these need your accounts)
-
-These are now the highest-leverage steps and cannot be done from the repo:
-
-1. **Google Search Console** - verify the property at https://search.google.com/search-console and
-   submit `https://s4shahryar.github.io/ShahryarSultanResume/sitemap.xml`. This is the single biggest
-   step to get indexed quickly.
-2. **Backlinks from profiles you control** - add the live URL to your LinkedIn (Contact info ->
-   Website), GitHub profile/README, and email signature. Inbound links from authoritative profiles
-   are the strongest signal for a personal-name search.
-3. **Optional: custom domain** (e.g. `shahryarsultan.com`) - ranks better for a personal brand than a
-   `github.io` sub-path. Add a `CNAME` file and configure DNS, then update the canonical/OG URLs.
-
-### Verify the live page
-
-- **Structured data:** https://search.google.com/test/rich-results
-- **Performance / Core Web Vitals:** https://pagespeed.web.dev/
-- **Index status:** Google Search Console (after submitting the sitemap)
-
-> If you change the canonical/live URL (e.g. move to a custom domain), update it in three places in
-> `index.html` (`<link rel="canonical">`, `og:url`, and the JSON-LD `url`/`image`), plus `robots.txt`
-> and `sitemap.xml`.
+- **Dynamics 365 CE / CRM** - Sales, Customer Insights, Project Operations
+- **Solution architecture** - requirements, solution design, and end-to-end delivery ownership
+- **Power Platform** - Model-Driven Apps, Canvas Apps, Power Automate, Dataverse
+- **Azure integration** - Azure Logic Apps, APIs, and system integration with external platforms
+- **Custom development** - C# .NET plugins, workflows, and custom activities; JavaScript and TypeScript
+- **Data and reporting** - SSIS, SSRS, SQL Server, and data migration
+- **Delivery practices** - Azure DevOps, CI/CD pipelines, and structured release management
 
 ---
 
-## Editing your content
+## My company
 
-Open `index.html` and edit the text directly - all content is real (no placeholders). Common edits:
-
-- **Contact** (email, location, LinkedIn, GitHub) - in both the desktop and mobile headers
-- **Professional Experience** - company names, dates, and bullets in the right column
-- **Profile, Skills, Education, Certifications** - in the left column
-
-When you edit, keep the text **plain ASCII** to preserve ATS friendliness (use `-` rather than smart
-dashes or bullet characters). If you update the LinkedIn handle, change it in both headers **and** in
-the JSON-LD `sameAs` block.
-
-> **Changing the styling?** `assets/output.css` only contains the Tailwind classes currently used in
-> `index.html`. If you add *new* Tailwind classes, regenerate it:
->
-> ```bash
-> npx tailwindcss@3 -i input.css -o assets/output.css --content ./index.html --minify
-> ```
->
-> (where `input.css` contains the three `@tailwind base; @tailwind components; @tailwind utilities;`
-> directives). Editing existing text never needs a rebuild.
+**Alishbit, S.L.** - an independent Microsoft Dynamics 365 and Power Platform consultancy based in
+Malaga, Spain. Through Alishbit I deliver Dynamics 365 CRM solutions end-to-end for client
+engagements: requirements understanding, solution design, implementation, integration, and ongoing
+production support. I work as the primary point of contact for clients, translating business needs
+into technical solutions and guiding delivery decisions across the full project lifecycle.
 
 ---
 
-## Printing / exporting to PDF
+## Experience
 
-Press **Ctrl+P** (Windows) or **Cmd+P** (Mac). The layout removes the background, shadow, and rounded
-corners for print and targets a single Letter-size page. To keep the accent colours in the PDF, enable
-**"Background graphics"** under *More settings* in the print dialog.
+| Role | Company | Period |
+|---|---|---|
+| Senior MS Dynamics 365 CRM Developer / Consultant | Alishbit, S.L. (Self-employed) | Aug 2025 - Present |
+| Senior Analyst, MS Dynamics 365 | Avanade | Dec 2022 - Aug 2025 |
+| Senior MS Dynamics 365 CRM Technical Consultant | Systems Limited | May 2021 - Dec 2022 |
+| Dynamics 365 Developer | Optimal Logics | Aug 2020 - May 2021 |
+| Business Intelligence Developer | Oil & Gas Development Company Ltd. | Feb 2019 - Feb 2020 |
+| Business Intelligence Developer | SKIF Enterprises Pvt Ltd. | Nov 2017 - Feb 2019 |
 
 ---
 
-## Deploying to GitHub Pages
+## Skills and technologies
 
-This is a static site served from the repository root:
+- **Dynamics 365 and Power Platform:** Dynamics 365 Sales, Customer Insights, Project Operations,
+  Model-Driven Apps, Canvas Apps, Power Automate
+- **Architecture and integration:** Solution Design, Azure Logic Apps, APIs, System Integration,
+  Data Migration
+- **Development:** C# .NET, Plugins, Workflows, Custom Activities, JavaScript, TypeScript
+- **Data and reporting:** SSIS, SSRS, SQL Server
+- **Tools and platforms:** Azure, Azure DevOps, Jira
 
-1. Go to **Settings -> Pages**
-2. Under **Source**, select **Deploy from a branch**
-3. Choose the **`main`** branch and **`/ (root)`** folder, then **Save**
+---
 
-The site goes live at `https://s4shahryar.github.io/ShahryarSultanResume/`. After each push to `main`,
-GitHub rebuilds automatically; hard-refresh (Ctrl/Cmd+Shift+R) to bypass the CDN cache.
+## Certifications
+
+- Microsoft Certified: Power Platform Developer
+- Microsoft Certified: Power Platform App Maker Associate
+- Microsoft Certified: Power Platform Fundamentals (PL-900)
+- Microsoft Certified: Dynamics 365 Fundamentals (CRM)
+- SQL for Data Science - University of California, Davis
+
+---
+
+## Education
+
+- **BSc (Hons) Computer Engineering** - Bahauddin Zakariya University (2013 - 2017)
+- **FSc, Pre-Engineering** - Govt. Emerson College, Multan (2011 - 2013)
+
+---
+
+## Connect
+
+- **Live resume:** https://s4shahryar.github.io/ShahryarSultanResume/
+- **Email:** s4shahryar@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/drshahryarsultan
+- **GitHub:** https://github.com/s4shahryar
+- **Location:** Malaga, Spain
