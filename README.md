@@ -73,7 +73,5 @@ The site will be live at `https://s4shahryar.github.io/ShahryarSultanResume/`.
 ## SEO checklist
 
 Already included: page `<title>` and description with your name, `author` meta, canonical URL,
-Open Graph + Twitter cards, `schema.org/Person` structured data, `robots.txt`, and `sitemap.xml`.
-
-**To finish:** add an `og-image.png` (recommended 1200×630) to the repo root so social/search previews
-show an image — the meta tags already point to it.
+Open Graph + Twitter cards (with a 1200×630 `og-image.png`), `schema.org/Person` structured data,
+`robots.txt`, and `sitemap.xml`.
