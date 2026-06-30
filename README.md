@@ -4,7 +4,7 @@
 
 Alishbit, S.L. is a specialist Microsoft Dynamics 365, Power Platform, and Azure consultancy based in
 **Malaga, Spain**, delivering CRM and business application solutions to clients across Europe, the
-United Kingdom, the Middle East, and beyond. We help organisations design, build, integrate, and
+United Kingdom, the United States, the Middle East, and beyond. We help organisations design, build, integrate, and
 support Dynamics 365 and Power Platform solutions end-to-end - from first requirements through
 architecture, implementation, integration, and go-live, to ongoing production support.
 
@@ -63,6 +63,7 @@ management with **Azure DevOps and CI/CD pipelines** for predictable, continuous
 We have delivered Dynamics 365 and Power Platform solutions across a range of regulated and
 enterprise sectors, including:
 
+- **Manufacturing and power infrastructure** - e.g. Power and Data Management (PDM)
 - **Insurance** - e.g. Zurich Insurance Group
 - **Professional services and audit** - e.g. BDO UK
 - **Public sector and government** - e.g. the Irish Department of Justice
@@ -71,10 +72,24 @@ enterprise sectors, including:
 
 ---
 
+## Featured project: end-to-end CRM for Power and Data Management (PDM)
+
+We delivered a complete, end-to-end Microsoft Dynamics 365 CRM implementation for
+[Power and Data Management (PDM)](https://pdmllc.net/), a US-based engineered-to-order manufacturer of
+power transformers, dead tank circuit breakers, and gas-insulated switchgear serving data centers,
+hyperscalers, utilities, and telecom carriers.
+
+The engagement covered the full delivery lifecycle - requirements gathering, solution design,
+configuration and customisation, integration, testing, and go-live - resulting in a production-ready
+Dynamics 365 CRM platform aligned to PDM's sales and operations processes.
+
+---
+
 ## Where we are located and how we work
 
 - **Based in:** Malaga, Andalusia, Spain
-- **Clients served:** Europe, the United Kingdom, the Middle East, and internationally
+- **Clients served:** Europe, the United Kingdom, the United States, the Middle East, and
+  internationally
 - **Delivery model:** remote-first, comfortable working in distributed teams and across multiple
   workstreams
 - **Engagements:** contract, B2B consultancy, fixed-scope projects, and retained advisory
